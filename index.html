@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- cabeçalho -->
+<header class="cabecalho">
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#linguagens">linguagens</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <!-- Pagina principal -->
+    <section class="primeiraPagina">
+        <div class="bg-blur"></div>
+        <div class="container-titulo">
+            <h1>Nickolas Gonçalves</h1>
+            <h2>Fullstack Development</h2>
+            <div class="botoes-linkedin-git">
+                <button>linkedin</button>
+                <button>Github</button>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="botoes-linkedin-git">
+        <button>linkedin</button>
+        <button>Github</button>
+    </section> -->
+    <section class="sobre" id="sobre">
+        <h3 class="subtituloRoxo">Sobre mim</h3>
+        <h2>É um prazer ter você aqui</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus turpis orci, in porta justo cursus
+            id. In lobortis congue mollis. Nullam posuere est vitae magna imperdiet maximus. Pellentesque tortor tellus,
+            tincidunt sed purus posuere, facilisis faucibus risus. Sed imperdiet vulputate mauris. Nulla blandit laoreet
+            mi, porttitor fermentum est cursus sit amet. Cras in ex porttitor, interdum nisl ac, luctus nunc. Mauris
+            tempus rhoncus elit, id dignissim eros egestas eget. Nunc nec sem dolor. Cras nec accumsan ipsum, a pretium
+            dolor. Mauris nec sem vulputate, auctor nunc id, tincidunt quam. Curabitur commodo turpis eu auctor luctus.
+            In hac habitasse platea dictumst. </p>
+        <img src="" alt="Imagem de um computadort">
+    </section>
+
+    <section class="linguagens" id="linguagens">
+        <h3 class="subtituloRoxo">Linguagens</h3>
+        <h2>Especialidade em</h2>
+        <section class="linguagens-Frontend">
+            <h2>Front-end Development</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus turpis orci, in porta justo
+                cursus id. In lobortis congue mollis. Nullam posuere est vitae magna imperdiet maximus</p>
+            <img src="" alt="Imagem Front-end">
+        </section>
+        <section class="linguagens-Backend">
+            <h2>Back-end Development</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus turpis orci, in porta justo
+                cursus id. In lobortis congue mollis. Nullam posuere est vitae magna imperdiet maximus</p>
+            <img src="" alt="Imagem Back-end">
+        </section>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <h3>Projetos</h3>
+        <h2>Ultimos projetos</h2>
+
+        <section class="projetosCaixas">
+            <div class="primeiroProjeto">
+                <h2>Primeiro projeto</h2>
+                <button><a href="">Sobre</a></button>
+                <button><a href="">Repositório</a></button>
+            </div>
+            <div class="segundoProjeto">
+                <h2>Segundo projeto</h2>
+                <button><a href="">Sobre</a></button>
+                <button><a href="">Repositório</a></button>
+            </div>
+            <div class="terceiroProjeto">
+                <h2>Terceiro projeto</h2>
+                <button><a href="">Sobre</a></button>
+                <button><a href="">Repositório</a></button>
+            </div>
+        </section>
+
+    </section>
+
+    <section class="contato" id="contato">
+        <h2>Entre em contato</h2>
+        <form>
+            <fieldset>
+                <legend>Informações de contato</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"> <br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="comentarios">Comentarios</label><br>
+                <textarea name="comentarios" id="comentarios" rows="4" cols="50"
+                    placeholder="Digite seus comentarios aqui:"></textarea><br>
+                <button onclick="alert('feedBack enviado')">Envie o feedBack</button>
+            </fieldset>
+        </form>
+    </section>
+
+</body>
+<!-- redapé -->
+<footer>
+
+</footer>
+
+</html>
