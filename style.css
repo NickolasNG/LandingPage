@@ -70,28 +70,56 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50%;
-  width: 50%;
-  margin: auto;
-  padding: 0.5rem;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .primeiraPagina h1 {
   display: flex;
   justify-content: center;
-  font-size: 3rem;
-  color: #ffffff
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .primeiraPagina h2 {
   display: flex;
   justify-content: center;
   color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .botoes-linkedin-git {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.botoes-linkedin-git button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid transparent;
+}
+
+.botoes-linkedin-git button:hover {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
