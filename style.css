@@ -15,35 +15,87 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* garante que fique acima de outros elementos */
-
+  z-index: 1000;
+  background-color: rgba(73, 21, 21, 0.3);
 }
 
-.nav nav ul {
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  list-style: none;
-  padding: 2rem;
-  font-size: 2rem;
+h3 {
+  color: #4C70EF;
 }
 
-.nav nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bolder;
-  font-size: 1.4rem;
-  transition: 0.8s;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem;
 }
 
-.nav nav ul li a:hover {
-  color: #c48f53;
+/* ----------------------Menu hamburguer------------- */
+.menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.menu-hamburguer span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+/* Animação do menu hambúrguer */
+.menu-hamburguer.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-hamburguer.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-hamburguer.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* Para telas menores 768px */
-
 @media (max-width: 768px) {
+  .menu-hamburguer {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.5s ease;
+  }
+
+  .nav-menu.active {
+    right: 0;
+    background-color: #4d4a4a;
+    backdrop-filter: blur(5px);
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+  }
+
   .cabecalho nav ul {
     flex-direction: column;
     gap: 1rem;
@@ -60,7 +112,29 @@ header {
   }
 }
 
-/* MEU NOME, função, botões*/
+/* ----------------------------------------------- */
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  transition: 0.8s;
+}
+
+.nav-menu ul li a:hover {
+  color: #4C70EF;
+}
+
+/* -------------Nickolas Gonçalves, Fullstack Development, botões*/
 
 .primeiraPagina {
   position: relative;
@@ -144,4 +218,40 @@ header {
   color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------Sobre mim---- */
+
+.container-Sobre {
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #212121;
+  color: white;
+
+}
+
+.container-main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+
+.conteudo-sobre {
+  padding-left: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* justify-content: space-around; */
+}
+
+.imagem-sobre {
+  border: #ffffff solid 2px;
+  border-bottom-right-radius: 15px;
+}
+
+.imagem-sobre img {
+  translate: -25px -25px;
 }
