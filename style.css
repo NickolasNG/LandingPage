@@ -134,7 +134,7 @@ h3 {
   color: #4C70EF;
 }
 
-/* -------------Nickolas Gonçalves, Fullstack Development, botões*/
+/* Nickolas Gonçalves, Fullstack Development, botões*/
 
 .primeiraPagina {
   position: relative;
@@ -227,12 +227,12 @@ h3 {
   padding-top: 5%;
   padding-bottom: 5%;
   background-color: #212121;
-  color: white;
+  color: #ffffff;
 
 }
 
-.container-main {
-  width: 80%;
+.container-Sobre-main {
+  width: 60%;
   margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
@@ -254,4 +254,85 @@ h3 {
 
 .imagem-sobre img {
   translate: -25px -25px;
+}
+
+/* -------------linguagens----------- */
+
+.container-linguagens {
+  background-color: #212121;
+  width: 100%;
+  padding-bottom: 5%;
+  color: #ffffff;
+}
+
+.container-linguagens-main {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.titulo-linguagens {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.linguagens-Frontend {
+  display: flex;
+  flex-direction: column;
+  background-color: #292C36;
+  padding: 20px;
+  border-radius: 12px;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.linguagens-Frontend img {
+  background-color: #38405A;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 5px;
+  margin-right: 3%;
+}
+
+.linguagens-Frontend-textoImagem{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  margin-bottom: 5%;
+}
+
+.linguagens-Backend {
+  display: flex;
+  flex-direction: column;
+  background-color: #292C36;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.linguagens-Backend img {
+  background-color: #38405A;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 5px;
+  margin-right: 3%;
+}
+
+.linguagens-Backend-textoImagem{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  margin-bottom: 5%;
 }
