@@ -3,20 +3,38 @@
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  /* background-color: rgb(210, 211, 211); */
+  /* background-color: 212121; */
   box-sizing: border-box;
   border: none;
   z-index: 0;
 }
 
 /* NAVEGAÇÃO */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: rgba(73, 21, 21, 0.3);
+
+header{
+  background-color: #38405A;
+  backdrop-filter: blur(5px);
+}
+
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  transition: 0.8s;
+}
+
+.nav-menu ul li a:hover {
+  color: #4C70EF;
 }
 
 h3 {
@@ -50,7 +68,7 @@ h3 {
   transition: all 0.4s ease;
 }
 
-/* Animação do menu hambúrguer */
+/* -------------------Animação do menu hambúrguer---------------- */
 .menu-hamburguer.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
 }
@@ -61,6 +79,24 @@ h3 {
 
 .menu-hamburguer.active span:nth-child(3) {
   transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* -----------------Esconder menu-----------------  */
+
+.nav.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.nav.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  /* Habilita interações novamente */
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  /* Transição de volta */
 }
 
 /* Para telas menores 768px */
@@ -110,28 +146,14 @@ h3 {
   .container-titulo h1 {
     font-size: 2.5rem;
   }
-}
 
-/* ----------------------------------------------- */
-.nav-menu ul {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  list-style: none;
-  padding: 0.8rem;
-  font-size: 1.8rem;
-}
+  .nav.hidden .nav-menu {
+    right: -100%;
+  }
 
-.nav-menu ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bolder;
-  font-size: 1.4rem;
-  transition: 0.8s;
-}
-
-.nav-menu ul li a:hover {
-  color: #4C70EF;
+  .nav.visible .nav-menu.active {
+    right: 0;
+  }
 }
 
 /* Nickolas Gonçalves, Fullstack Development, botões*/
@@ -302,7 +324,7 @@ h3 {
   margin-right: 3%;
 }
 
-.linguagens-Frontend-textoImagem{
+.linguagens-Frontend-textoImagem {
   display: flex;
   flex-direction: row-reverse;
   justify-content: start;
@@ -330,9 +352,11 @@ h3 {
   margin-right: 3%;
 }
 
-.linguagens-Backend-textoImagem{
+.linguagens-Backend-textoImagem {
   display: flex;
   flex-direction: row-reverse;
   justify-content: start;
   margin-bottom: 5%;
 }
+
+/* -----------Portifólio------------ */
