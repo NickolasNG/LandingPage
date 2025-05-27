@@ -254,7 +254,7 @@ h3 {
 }
 
 .container-Sobre-main {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
@@ -591,4 +591,290 @@ button:focus:not(:focus-visible) {
 .form-group textarea {
     resize: vertical;
     min-height: 100px;
+}
+
+/* ----------------------RESPONSIVIDADE */
+/* ---------------Responsividade TELAS GRANDES -------------- */
+
+@media (max-width: 1110px) {
+
+    /* Geral */
+    h1 {
+        font-size: 3.5rem; /* Reduz o tamanho do título principal */
+    }
+    h2 {
+        font-size: 1.5rem; /* Reduz o tamanho dos subtítulos */
+    }
+    .subtituloRoxo {
+        font-size: 1rem; /* Ajusta o subtítulo roxo */
+    }
+
+    /* Primeira Página (Banner Principal) */
+    .primeiraPagina h1 {
+        font-size: 3.5rem;
+    }
+    .primeiraPagina h2 {
+        font-size: 1.5rem;
+    }
+    .botoes-linkedin-git button {
+        padding: 0.8rem 1.5rem; /* Reduz um pouco o padding dos botões */
+        font-size: 0.9rem;
+    }
+
+    /* Seção "Sobre mim" */
+    .container-Sobre-main {
+        width: 80%; /* Aumenta a largura para ocupar mais espaço na tela */
+        flex-direction: column; /* Coloca a imagem e o texto um abaixo do outro */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .conteudo-sobre {
+        padding-left: 0; /* Remove padding lateral quando os itens estão em coluna */
+        margin-bottom: 30px; /* Espaço entre o texto e a imagem */
+    }
+
+    .imagem-sobre {
+        margin-top: 20px; /* Garante espaço se a imagem vir depois do texto */
+        border: none; /* Remove a borda da imagem se não quiser mais */
+    }
+    .imagem-sobre img {
+        width: 80%; /* Ajusta o tamanho da imagem para ser responsiva */
+        max-width: 400px; /* Limita o tamanho máximo */
+        height: auto; /* Mantém a proporção */
+        translate: 0 0; /* Remove a translação */
+    }
+
+    /* Seção "Linguagens" */
+    .container-linguagens-main {
+        width: 80%; /* Aumenta a largura para ocupar mais espaço */
+        flex-direction: column; /* Coloca Front-end e Back-end um abaixo do outro */
+        gap: 30px; /* Espaçamento entre as caixas */
+    }
+
+    .linguagens-Frontend,
+    .linguagens-Backend {
+        margin-right: 0; /* Remove margem lateral */
+        padding: 25px; /* Ajusta padding */
+    }
+
+    .linguagens-Frontend-textoImagem,
+    .linguagens-Backend-textoImagem {
+        justify-content: center; /* Centraliza a imagem e o texto do título */
+        margin-bottom: 15px; /* Ajusta o espaçamento */
+    }
+
+    /* Seção "Projetos" */
+    .container-projetos-Caixas {
+        flex-direction: column; /* Coloca os projetos um abaixo do outro */
+        align-items: center; /* Centraliza os projetos */
+        gap: 40px; /* Espaçamento maior entre os projetos */
+    }
+
+    .primeiroProjeto,
+    .segundoProjeto,
+    .terceiroProjeto {
+        width: 90%; /* Ocupa quase toda a largura */
+        max-width: 450px; /* Limita o tamanho máximo */
+    }
+
+    .primeiroProjeto img,
+    .segundoProjeto img,
+    .terceiroProjeto img {
+        width: 100%; /* Imagens ocupam 100% da largura da caixa do projeto */
+        height: auto; /* Mantém proporção */
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    /* Seção "Contato" (Formulário) */
+    .contato form {
+        max-width: 80%; /* Aumenta a largura do formulário */
+    }
+}
+
+/* -----------------Ajustes para Celulares (até 768px) */
+
+@media (max-width: 768px) {
+
+    /* Geral */
+    h1 {
+        font-size: 2.8rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .subtituloRoxo {
+        font-size: 0.9rem;
+    }
+
+    /* Primeira Página (Banner Principal) */
+    .primeiraPagina h1 {
+        font-size: 2.8rem;
+    }
+    .primeiraPagina h2 {
+        font-size: 1.3rem;
+    }
+    .botoes-linkedin-git {
+        flex-direction: column; /* Coloca os botões LinkedIn e GitHub um abaixo do outro */
+        gap: 1rem;
+    }
+    .botoes-linkedin-git button {
+        width: 80%; /* Botões ocupam mais largura */
+        max-width: 250px;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Seção "Sobre mim" */
+    .container-Sobre-main {
+        width: 90%; /* Aumenta a largura para ocupar mais espaço */
+        padding-top: 30px; /* Ajusta o padding do topo */
+        padding-bottom: 30px; /* Ajusta o padding de baixo */
+    }
+    .conteudo-sobre h2 {
+        font-size: 1.8rem; /* Aumenta um pouco o título "É um prazer ter você aqui" */
+    }
+    .conteudo-sobre p {
+        font-size: 0.9rem; /* Diminui o tamanho do parágrafo */
+    }
+    .imagem-sobre img {
+        width: 90%; /* Ajusta a imagem para celulares */
+        max-width: 300px;
+    }
+
+    /* Seção "Linguagens" */
+    .container-linguagens-main {
+        width: 90%; /* Aumenta a largura */
+    }
+    .linguagens-Frontend-textoImagem,
+    .linguagens-Backend-textoImagem {
+        flex-direction: column; /* Coloca o título e a imagem da linguagem um abaixo do outro */
+        align-items: center; /* Centraliza */
+        text-align: center;
+    }
+    .linguagens-Frontend img,
+    .linguagens-Backend img {
+        margin-right: 0; /* Remove margem lateral */
+        margin-bottom: 10px; /* Adiciona margem abaixo da imagem */
+    }
+    .linguagens-Frontend h2,
+    .linguagens-Backend h2 {
+        font-size: 1.6rem; /* Reduz um pouco os títulos das linguagens */
+        text-align: center;
+    }
+    .linguagens-Frontend p,
+    .linguagens-Backend p {
+        font-size: 0.9rem; /* Reduz o texto das descrições */
+    }
+
+
+    /* Seção "Projetos" */
+    .container-projetos-Caixas {
+        gap: 30px; /* Ajusta espaçamento entre projetos */
+    }
+    .primeiroProjeto,
+    .segundoProjeto,
+    .terceiroProjeto {
+        width: 95%; /* Ocupa quase toda a largura em celulares */
+        max-width: none; /* Remove o limite de largura máxima */
+    }
+
+    .primeiroProjeto h2,
+    .segundoProjeto h2,
+    .terceiroProjeto h2 {
+        font-size: 1.5rem; /* Ajusta o título dos projetos */
+    }
+    
+    .front-text {
+        padding: 10px 18px; /* Reduz ainda mais o padding dos botões de projeto */
+        font-size: 1rem;
+    }
+
+    /* Seção "Contato" (Formulário) */
+    .contato {
+        padding: 40px 15px; /* Ajusta padding da seção de contato */
+    }
+    .contato form {
+        max-width: 95%; /* Ocupa quase toda a largura em celulares */
+        padding: 20px; /* Reduz o padding do formulário */
+    }
+    .contato fieldset {
+        gap: 15px; /* Diminui um pouco o espaçamento entre os campos */
+    }
+    .form-group label {
+        font-size: 0.9rem; /* Reduz o tamanho do label */
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        padding: 10px 12px; /* Reduz o padding dos inputs */
+        font-size: 0.9rem;
+    }
+    .contato form button[type="submit"] {
+        margin-top: 25px; /* Ajusta margem do botão de envio */
+    }
+}
+
+/* ---------------Ajustes para Celulares menores */
+
+@media (max-width: 480px) {
+    /* Geral */
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 0.85rem;
+    }
+
+    /* Primeira Página */
+    .primeiraPagina h1 {
+        font-size: 2.2rem;
+    }
+    .primeiraPagina h2 {
+        font-size: 1.1rem;
+    }
+    .botoes-linkedin-git button {
+        width: 90%;
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+
+    /* Seção "Sobre mim" */
+    .container-Sobre-main {
+        width: 95%;
+    }
+    .conteudo-sobre h2 {
+        font-size: 1.5rem;
+    }
+    .imagem-sobre img {
+        width: 100%;
+    }
+
+    /* Seção "Linguagens" */
+    .container-linguagens-main {
+        width: 95%;
+    }
+    .linguagens-Frontend h2,
+    .linguagens-Backend h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Seção "Projetos" */
+    .primeiroProjeto h2,
+    .segundoProjeto h2,
+    .terceiroProjeto h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Seção "Contato" */
+    .contato form {
+        padding: 15px;
+    }
+    .contato fieldset {
+        gap: 12px;
+    }
 }
