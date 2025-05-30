@@ -22,7 +22,6 @@ header.classList.add('visible');
 
 // Event listener para rolagem da página
 window.addEventListener('scroll', () => {
-
     if (window.scrollY > lastScrollY && window.scrollY > 100) {
         header.classList.remove('visible');
         header.classList.add('hidden');
@@ -36,13 +35,11 @@ window.addEventListener('scroll', () => {
 // Event listener para movimento do mouse
 let mouseMoveTimeout;
 document.addEventListener('mousemove', (e) => {
-
     if (e.clientY < 100) {
         header.classList.remove('hidden');
         header.classList.add('visible');
         clearTimeout(mouseMoveTimeout);
     } else if (header.classList.contains('visible') && window.scrollY > 100) {
-
         clearTimeout(mouseMoveTimeout);
         mouseMoveTimeout = setTimeout(() => {
             header.classList.remove('visible');

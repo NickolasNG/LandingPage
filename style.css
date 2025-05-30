@@ -12,7 +12,7 @@
 /* NAVEGAÇÃO */
 
 header {
-  background-color: #38405A;
+  background-color: #292c36c2;
   backdrop-filter: blur(5px);
 }
 
@@ -68,7 +68,7 @@ h3 {
   transition: all 0.4s ease;
 }
 
-/* -------------------Animação do menu hambúrguer---------------- */
+/* -------------------Animação do menu hambúrguer----------- */
 .menu-hamburguer.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
 }
@@ -363,7 +363,8 @@ h3 {
 
 .container-projetos-main {
   background-color: #212121;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
+  padding-top: 3%;
   width: 100%;
   color: #ffffff;
   margin: 0 auto;
@@ -374,65 +375,48 @@ h3 {
   flex-direction: column;
   text-align: center;
   gap: 10px;
-  padding-bottom: 2.5%;
+  margin-bottom: 3%;
 }
 
 .container-projetos-Caixas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2%;
+  justify-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 0 0.5%;
 }
 
-.primeiroProjeto {
+.projeto-item {
   background-color: #292C36;
   border-radius: 10px;
-  padding: 1%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.segundoProjeto {
-  background-color: #292C36;
-  border-radius: 10px;
-  padding: 1%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
+.projeto-item-texto{
+  padding: 5%;
+  text-align: start;
+  padding-top: 0px;
 }
 
-.terceiroProjeto {
-  background-color: #292C36;
-  border-radius: 10px;
-  padding: 1%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
+.projeto-item h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
 }
 
-.primeiroProjeto img {
-  width: 380px;
-  height: 283px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.segundoProjeto img {
-  width: 380px;
-  height: 283px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.terceiroProjeto img {
-  width: 380px;
-  height: 283px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+.projeto-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 /* -------Botões---------- */
@@ -447,6 +431,15 @@ button {
   transition: filter 250ms;
   user-select: none;
   touch-action: manipulation;
+  margin-bottom: 2%;
+}
+
+.projeto-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: auto;
+  margin-bottom: 2%;
 }
 
 .shadow {
@@ -522,6 +515,23 @@ button:focus:not(:focus-visible) {
   outline: none;
 }
 
+/* --------------------Imagem dos projetos */
+
+.projeto-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Estilo para os outros projetos quando um está em destaque */
+.container-projetos-Caixas.destaque-ativo .projeto-item:not(.destaque) {
+  opacity: 0.3;
+  pointer-events: none;
+  transform: translateY(100px);
+}
+
 /* -------------Entre em contato-------------*/
 
 .contato {
@@ -546,51 +556,51 @@ button:focus:not(:focus-visible) {
 }
 
 .contato fieldset {
-    border: 2px solid #4C70EF;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  border: 2px solid #4C70EF;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .form-group label {
-    margin-bottom: 8px;
-    font-weight: 500;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #4C70EF;
-    border-radius: 8px;
-    background-color: #38405A;
-    color: #ffffff;
-    font-size: 1rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #4C70EF;
+  border-radius: 8px;
+  background-color: #38405A;
+  color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: #558FFF;
+  outline: none;
+  border-color: #558FFF;
 }
 
 .form-group textarea {
-    resize: vertical;
-    min-height: 100px;
+  resize: vertical;
+  min-height: 100px;
 }
 
 /* ----------------------RESPONSIVIDADE */
@@ -598,283 +608,317 @@ button:focus:not(:focus-visible) {
 
 @media (max-width: 1110px) {
 
-    /* Geral */
-    h1 {
-        font-size: 3.5rem; /* Reduz o tamanho do título principal */
-    }
-    h2 {
-        font-size: 1.5rem; /* Reduz o tamanho dos subtítulos */
-    }
-    .subtituloRoxo {
-        font-size: 1rem; /* Ajusta o subtítulo roxo */
-    }
+  /* Geral */
+  h1 {
+    font-size: 3.5rem;
+  }
 
-    /* Primeira Página (Banner Principal) */
-    .primeiraPagina h1 {
-        font-size: 3.5rem;
-    }
-    .primeiraPagina h2 {
-        font-size: 1.5rem;
-    }
-    .botoes-linkedin-git button {
-        padding: 0.8rem 1.5rem; /* Reduz um pouco o padding dos botões */
-        font-size: 0.9rem;
-    }
+  h2 {
+    font-size: 1.5rem;
+  }
 
-    /* Seção "Sobre mim" */
-    .container-Sobre-main {
-        width: 80%; /* Aumenta a largura para ocupar mais espaço na tela */
-        flex-direction: column; /* Coloca a imagem e o texto um abaixo do outro */
-        align-items: center; /* Centraliza os itens */
-        text-align: center; /* Centraliza o texto */
-    }
+  .subtituloRoxo {
+    font-size: 1rem;
+  }
 
-    .conteudo-sobre {
-        padding-left: 0; /* Remove padding lateral quando os itens estão em coluna */
-        margin-bottom: 30px; /* Espaço entre o texto e a imagem */
-    }
+  /* Primeira Página (Banner Principal) */
+  .primeiraPagina h1 {
+    font-size: 3.5rem;
+  }
 
-    .imagem-sobre {
-        margin-top: 20px; /* Garante espaço se a imagem vir depois do texto */
-        border: none; /* Remove a borda da imagem se não quiser mais */
-    }
-    .imagem-sobre img {
-        width: 80%; /* Ajusta o tamanho da imagem para ser responsiva */
-        max-width: 400px; /* Limita o tamanho máximo */
-        height: auto; /* Mantém a proporção */
-        translate: 0 0; /* Remove a translação */
-    }
+  .primeiraPagina h2 {
+    font-size: 1.5rem;
+  }
 
-    /* Seção "Linguagens" */
-    .container-linguagens-main {
-        width: 80%; /* Aumenta a largura para ocupar mais espaço */
-        flex-direction: column; /* Coloca Front-end e Back-end um abaixo do outro */
-        gap: 30px; /* Espaçamento entre as caixas */
-    }
+  .botoes-linkedin-git button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 
-    .linguagens-Frontend,
-    .linguagens-Backend {
-        margin-right: 0; /* Remove margem lateral */
-        padding: 25px; /* Ajusta padding */
-    }
+  /* Seção "Sobre mim" */
+  .container-Sobre-main {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .linguagens-Frontend-textoImagem,
-    .linguagens-Backend-textoImagem {
-        justify-content: center; /* Centraliza a imagem e o texto do título */
-        margin-bottom: 15px; /* Ajusta o espaçamento */
-    }
+  .conteudo-sobre {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
 
-    /* Seção "Projetos" */
-    .container-projetos-Caixas {
-        flex-direction: column; /* Coloca os projetos um abaixo do outro */
-        align-items: center; /* Centraliza os projetos */
-        gap: 40px; /* Espaçamento maior entre os projetos */
-    }
+  .imagem-sobre {
+    margin-top: 20px;
+    border: none;
+  }
 
-    .primeiroProjeto,
-    .segundoProjeto,
-    .terceiroProjeto {
-        width: 90%; /* Ocupa quase toda a largura */
-        max-width: 450px; /* Limita o tamanho máximo */
-    }
+  .imagem-sobre img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    translate: 0 0;
+  }
 
-    .primeiroProjeto img,
-    .segundoProjeto img,
-    .terceiroProjeto img {
-        width: 100%; /* Imagens ocupam 100% da largura da caixa do projeto */
-        height: auto; /* Mantém proporção */
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
+  /* Seção "Linguagens" */
+  .container-linguagens-main {
+    width: 80%;
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    /* Seção "Contato" (Formulário) */
-    .contato form {
-        max-width: 80%; /* Aumenta a largura do formulário */
-    }
+  .linguagens-Frontend,
+  .linguagens-Backend {
+    margin-right: 0;
+    padding: 25px;
+  }
+
+  .linguagens-Frontend-textoImagem,
+  .linguagens-Backend-textoImagem {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  /* Seção "Projetos" */
+  .container-projetos-Caixas {
+    /* O grid já é responsivo com auto-fit, aqui podemos apenas ajustar a largura máxima do container */
+    max-width: 900px;
+    /* Exemplo: limite o grid a uma largura menor para manter 2-3 colunas em telas maiores */
+    padding: 0 15px;
+    gap: 25px;
+  }
+
+  .projeto-item {
+    padding: 15px;
+    /* Ajusta o padding interno do item */
+  }
+
+  .projeto-item img {
+    height: 180px;
+    /* Ajusta a altura da imagem para telas menores */
+  }
+
+  /* Seção "Contato" (Formulário) */
+  .contato form {
+    max-width: 80%;
+  }
 }
+
+
 
 /* -----------------Ajustes para Celulares (até 768px) */
 
 @media (max-width: 768px) {
 
-    /* Geral */
-    h1 {
-        font-size: 2.8rem;
-    }
-    h2 {
-        font-size: 1.3rem;
-    }
-    .subtituloRoxo {
-        font-size: 0.9rem;
-    }
+  /* Geral */
+  h1 {
+    font-size: 2.8rem;
+  }
 
-    /* Primeira Página (Banner Principal) */
-    .primeiraPagina h1 {
-        font-size: 2.8rem;
-    }
-    .primeiraPagina h2 {
-        font-size: 1.3rem;
-    }
-    .botoes-linkedin-git {
-        flex-direction: column; /* Coloca os botões LinkedIn e GitHub um abaixo do outro */
-        gap: 1rem;
-    }
-    .botoes-linkedin-git button {
-        width: 80%; /* Botões ocupam mais largura */
-        max-width: 250px;
-        padding: 0.7rem 1.2rem;
-        font-size: 0.9rem;
-    }
+  h2 {
+    font-size: 1.3rem;
+  }
 
-    /* Seção "Sobre mim" */
-    .container-Sobre-main {
-        width: 90%; /* Aumenta a largura para ocupar mais espaço */
-        padding-top: 30px; /* Ajusta o padding do topo */
-        padding-bottom: 30px; /* Ajusta o padding de baixo */
-    }
-    .conteudo-sobre h2 {
-        font-size: 1.8rem; /* Aumenta um pouco o título "É um prazer ter você aqui" */
-    }
-    .conteudo-sobre p {
-        font-size: 0.9rem; /* Diminui o tamanho do parágrafo */
-    }
-    .imagem-sobre img {
-        width: 90%; /* Ajusta a imagem para celulares */
-        max-width: 300px;
-    }
+  .subtituloRoxo {
+    font-size: 0.9rem;
+  }
 
-    /* Seção "Linguagens" */
-    .container-linguagens-main {
-        width: 90%; /* Aumenta a largura */
-    }
-    .linguagens-Frontend-textoImagem,
-    .linguagens-Backend-textoImagem {
-        flex-direction: column; /* Coloca o título e a imagem da linguagem um abaixo do outro */
-        align-items: center; /* Centraliza */
-        text-align: center;
-    }
-    .linguagens-Frontend img,
-    .linguagens-Backend img {
-        margin-right: 0; /* Remove margem lateral */
-        margin-bottom: 10px; /* Adiciona margem abaixo da imagem */
-    }
-    .linguagens-Frontend h2,
-    .linguagens-Backend h2 {
-        font-size: 1.6rem; /* Reduz um pouco os títulos das linguagens */
-        text-align: center;
-    }
-    .linguagens-Frontend p,
-    .linguagens-Backend p {
-        font-size: 0.9rem; /* Reduz o texto das descrições */
-    }
+  /* Primeira Página (Banner Principal) */
+  .primeiraPagina h1 {
+    font-size: 2.8rem;
+  }
 
+  .primeiraPagina h2 {
+    font-size: 1.3rem;
+  }
 
-    /* Seção "Projetos" */
-    .container-projetos-Caixas {
-        gap: 30px; /* Ajusta espaçamento entre projetos */
-    }
-    .primeiroProjeto,
-    .segundoProjeto,
-    .terceiroProjeto {
-        width: 95%; /* Ocupa quase toda a largura em celulares */
-        max-width: none; /* Remove o limite de largura máxima */
-    }
+  .botoes-linkedin-git {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .primeiroProjeto h2,
-    .segundoProjeto h2,
-    .terceiroProjeto h2 {
-        font-size: 1.5rem; /* Ajusta o título dos projetos */
-    }
-    
-    .front-text {
-        padding: 10px 18px; /* Reduz ainda mais o padding dos botões de projeto */
-        font-size: 1rem;
-    }
+  .botoes-linkedin-git button {
+    width: 80%;
+    max-width: 250px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
 
-    /* Seção "Contato" (Formulário) */
-    .contato {
-        padding: 40px 15px; /* Ajusta padding da seção de contato */
-    }
-    .contato form {
-        max-width: 95%; /* Ocupa quase toda a largura em celulares */
-        padding: 20px; /* Reduz o padding do formulário */
-    }
-    .contato fieldset {
-        gap: 15px; /* Diminui um pouco o espaçamento entre os campos */
-    }
-    .form-group label {
-        font-size: 0.9rem; /* Reduz o tamanho do label */
-    }
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group textarea {
-        padding: 10px 12px; /* Reduz o padding dos inputs */
-        font-size: 0.9rem;
-    }
-    .contato form button[type="submit"] {
-        margin-top: 25px; /* Ajusta margem do botão de envio */
-    }
+  /* Seção "Sobre mim" */
+  .container-Sobre-main {
+    width: 90%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .conteudo-sobre h2 {
+    font-size: 1.8rem;
+  }
+
+  .conteudo-sobre p {
+    font-size: 0.9rem;
+  }
+
+  .imagem-sobre img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Seção "Linguagens" */
+  .container-linguagens-main {
+    width: 90%;
+  }
+
+  .linguagens-Frontend-textoImagem,
+  .linguagens-Backend-textoImagem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .linguagens-Frontend img,
+  .linguagens-Backend img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .linguagens-Frontend h2,
+  .linguagens-Backend h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .linguagens-Frontend p,
+  .linguagens-Backend p {
+    font-size: 0.9rem;
+  }
+
+  /* Seção "Projetos" */
+  .container-projetos-Caixas {
+    grid-template-columns: 1fr;
+    /* Força uma única coluna em telas menores */
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .projeto-item {
+    max-width: 400px;
+    /* Limita a largura individual do item mesmo em 1 coluna */
+    margin: 0 auto;
+    /* Centraliza o item na coluna */
+  }
+
+  .projeto-item img {
+    height: 160px;
+    /* Ajusta a altura da imagem para celulares */
+  }
+
+  .front-text {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+
+  /* Seção "Contato" (Formulário) */
+  .contato {
+    padding: 40px 15px;
+  }
+
+  .contato form {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .contato fieldset {
+    gap: 15px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .contato form button[type="submit"] {
+    margin-top: 25px;
+  }
 }
 
 /* ---------------Ajustes para Celulares menores */
 
 @media (max-width: 480px) {
-    /* Geral */
-    h1 {
-        font-size: 2.2rem;
-    }
-    h2 {
-        font-size: 1.1rem;
-    }
-    p {
-        font-size: 0.85rem;
-    }
 
-    /* Primeira Página */
-    .primeiraPagina h1 {
-        font-size: 2.2rem;
-    }
-    .primeiraPagina h2 {
-        font-size: 1.1rem;
-    }
-    .botoes-linkedin-git button {
-        width: 90%;
-        font-size: 0.85rem;
-        padding: 0.6rem 1rem;
-    }
+  /* Geral */
+  h1 {
+    font-size: 2.2rem;
+  }
 
-    /* Seção "Sobre mim" */
-    .container-Sobre-main {
-        width: 95%;
-    }
-    .conteudo-sobre h2 {
-        font-size: 1.5rem;
-    }
-    .imagem-sobre img {
-        width: 100%;
-    }
+  h2 {
+    font-size: 1.1rem;
+  }
 
-    /* Seção "Linguagens" */
-    .container-linguagens-main {
-        width: 95%;
-    }
-    .linguagens-Frontend h2,
-    .linguagens-Backend h2 {
-        font-size: 1.4rem;
-    }
+  p {
+    font-size: 0.85rem;
+  }
 
-    /* Seção "Projetos" */
-    .primeiroProjeto h2,
-    .segundoProjeto h2,
-    .terceiroProjeto h2 {
-        font-size: 1.3rem;
-    }
+  /* Primeira Página */
+  .primeiraPagina h1 {
+    font-size: 2.2rem;
+  }
 
-    /* Seção "Contato" */
-    .contato form {
-        padding: 15px;
-    }
-    .contato fieldset {
-        gap: 12px;
-    }
+  .primeiraPagina h2 {
+    font-size: 1.1rem;
+  }
+
+  .botoes-linkedin-git button {
+    width: 90%;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Seção "Sobre mim" */
+  .container-Sobre-main {
+    width: 95%;
+  }
+
+  .conteudo-sobre h2 {
+    font-size: 1.5rem;
+  }
+
+  .imagem-sobre img {
+    width: 100%;
+  }
+
+  /* Seção "Linguagens" */
+  .container-linguagens-main {
+    width: 95%;
+  }
+
+  .linguagens-Frontend h2,
+  .linguagens-Backend h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Seção "Projetos" */
+  .projeto-item img {
+    height: 140px;
+    /* Altura menor para imagens em celulares muito pequenos */
+  }
+
+  /* Seção "Contato" */
+  .contato form {
+    padding: 15px;
+  }
+
+  .contato fieldset {
+    gap: 12px;
+  }
+
+  .projeto-item {
+    padding: 15px;
+  }
 }
