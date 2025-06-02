@@ -401,7 +401,7 @@ h3 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.projeto-item-texto{
+.projeto-item-texto {
   padding: 5%;
   text-align: start;
   padding-top: 0px;
@@ -602,6 +602,24 @@ button:focus:not(:focus-visible) {
   resize: vertical;
   min-height: 100px;
 }
+
+/* ---------------------------FOOTER----------------------- */
+
+.container-Footer {
+  width: 100%;
+  color: #ffffff;
+  background-color: #212121;
+  padding-bottom: 4%;
+  padding-top: 1%;
+}
+
+.containerTexto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
 
 /* ----------------------RESPONSIVIDADE */
 /* ---------------Responsividade TELAS GRANDES -------------- */
