@@ -156,7 +156,7 @@ h3 {
   }
 }
 
-/* Nickolas Gonçalves, Fullstack Development, botões*/
+/* botões*/
 
 .primeiraPagina {
   position: relative;
@@ -419,7 +419,7 @@ h3 {
   object-fit: contain;
 }
 
-/* -------Botões---------- */
+/* -------Botões dos projetos---------- */
 
 button {
   position: relative;
@@ -525,11 +525,8 @@ button:focus:not(:focus-visible) {
   margin-bottom: 10px;
 }
 
-/* Estilo para os outros projetos quando um está em destaque */
-.container-projetos-Caixas.destaque-ativo .projeto-item:not(.destaque) {
-  opacity: 0.3;
-  pointer-events: none;
-  transform: translateY(100px);
+.projeto_video{
+  width: 100%;
 }
 
 /* -------------Entre em contato-------------*/
@@ -932,7 +929,7 @@ button:focus:not(:focus-visible) {
   }
 
   .contato fieldset {
-    gap: 12px;
+    gap: 15px;
   }
 
   .projeto-item {
