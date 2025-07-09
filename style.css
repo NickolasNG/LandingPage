@@ -525,7 +525,7 @@ button:focus:not(:focus-visible) {
   margin-bottom: 10px;
 }
 
-.projeto_video{
+.projeto_video {
   width: 100%;
 }
 
@@ -805,6 +805,7 @@ button:focus:not(:focus-visible) {
   .linguagens-Frontend p,
   .linguagens-Backend p {
     font-size: 0.9rem;
+    text-align: center;
   }
 
   /* Seção "Projetos" */
