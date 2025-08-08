@@ -394,7 +394,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   text-align: center;
   width: 100%;
   overflow: hidden;
@@ -402,9 +402,8 @@ h3 {
 }
 
 .projeto-item-texto {
-  padding: 5%;
-  text-align: start;
-  padding-top: 0px;
+  padding: 2%;
+  text-align: center;
 }
 
 .projeto-item h2 {
@@ -437,9 +436,9 @@ button {
 .projeto-botoes {
   display: flex;
   justify-content: center;
-  gap: 5%;
+  gap: 6%;
   margin-top: auto;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 .shadow {
@@ -522,7 +521,7 @@ button:focus:not(:focus-visible) {
   height: auto;
   border-radius: 8px;
   object-fit: contain;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .projeto_video{
@@ -810,21 +809,17 @@ button:focus:not(:focus-visible) {
   /* Seção "Projetos" */
   .container-projetos-Caixas {
     grid-template-columns: 1fr;
-    /* Força uma única coluna em telas menores */
     gap: 20px;
     padding: 0 15px;
   }
 
   .projeto-item {
     max-width: 400px;
-    /* Limita a largura individual do item mesmo em 1 coluna */
     margin: 0 auto;
-    /* Centraliza o item na coluna */
   }
 
   .projeto-item img {
     height: 160px;
-    /* Ajusta a altura da imagem para celulares */
   }
 
   .front-text {
@@ -832,7 +827,7 @@ button:focus:not(:focus-visible) {
     font-size: 1rem;
   }
 
-  /* Seção "Contato" (Formulário) */
+/* Formulario cell */
   .contato {
     padding: 40px 15px;
   }
